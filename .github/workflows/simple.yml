@@ -14,6 +14,8 @@ jobs:
           npm -v
   run-windows-command:
     runs-on: windows-latest
+    # "run-shell-command"の実行を待ってからの実行となる
+    needs: ["run-shell-command"]
     steps:
       - name: Directory
         run: Get-location

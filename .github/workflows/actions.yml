@@ -5,6 +5,7 @@ on:
     # ブランチを指定
     branches:
       - master
+      - "develop"
       - "feature/**" # matches featur/featA, feature/featB, doesn't match feature/feat/a
       - "!feature/featc"
     tags: 

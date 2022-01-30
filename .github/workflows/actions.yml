@@ -8,12 +8,12 @@ on:
       - "develop"
       - "feature/**" # matches featur/featA, feature/featB, doesn't match feature/feat/a
       - "!feature/featc"
-    tags: 
-      - v1.*
+    # tags: 
+    #   - v1.*
     # ファイルパスを指定  
-    paths: 
-      - "**.js"
-      - "!filename.js"
+    # paths: 
+    #   - "**.js"
+    #   - "!filename.js"
     # paths-ignore:
     # - 'docs/**'
   # repository_dispatch:

@@ -1,15 +1,18 @@
 name: Actions Workflow 
 
-on: [push]
-    # branches:
-    #   - master
-    #   - "feature/**" # matches featur/featA, feature/featB, doesn't match feature/feat/a
-    #   - "!feature/featc"
-    # tags: 
-    #   - v1.*
-    # paths: 
-    #   - "**.js"
-    #   - "!filename.js"
+on:
+  push:
+    # ブランチを指定
+    branches:
+      - master
+      - "feature/**" # matches featur/featA, feature/featB, doesn't match feature/feat/a
+      - "!feature/featc"
+    tags: 
+      - v1.*
+    # ファイルパスを指定  
+    paths: 
+      - "**.js"
+      - "!filename.js"
     # paths-ignore:
     # - 'docs/**'
   # repository_dispatch:
@@ -26,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: playload
-        run: echo ${{ github.event.client_payload.env }}
+        run: echo ${github.event.client_payload.env}
       - name: List Files 
         run: |
           pwd
